@@ -1,0 +1,32 @@
+import express, { Router } from "express";
+import type { Request, Response } from "express";
+import { Pergunta } from "../domain/Pergunta.js";
+import { Resposta } from "../domain/Resposta.js";
+import ChatService from "../service/chatService.js";
+
+const router = Router();
+const chatService = new ChatService();
+
+router.post("/chat", async (req: Request, res: Response) => {
+  const { pergunta } = req.body;
+
+  if (typeof pergunta !== "string" || pergunta.trim() === '') {
+    return res.status(400).json({
+      erro: "A pergunta é obrigatória",
+    });
+  }
+
+  try {
+    const resposta = await chatService.respostaChat(pergunta);
+
+    return res.status(200).json({ resposta });
+  } catch (erro) {
+    console.error(erro);
+
+    return res.status(500).json({
+      erro: "Não foi possível processar a pergunta",
+    });
+  }
+});
+
+export default router;
