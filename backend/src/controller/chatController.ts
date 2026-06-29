@@ -1,7 +1,5 @@
-import express, { Router } from "express";
+import { Router } from "express";
 import type { Request, Response } from "express";
-import { Pergunta } from "../domain/Pergunta.js";
-import { Resposta } from "../domain/Resposta.js";
 import ChatService from "../service/chatService.js";
 
 const router = Router();

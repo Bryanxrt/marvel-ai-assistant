@@ -1,5 +1,4 @@
 import { env } from "../config/env.js";
-import cors from "cors";
 
 type RespostaN8n = {
   resposta: string;

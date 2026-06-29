@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx --env-file=.env src/server.ts"
+    "dev": "tsx --env-file=.env src/server.ts",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [],
   "author": "",
