@@ -23,6 +23,12 @@ router.post("/chat", async (req: Request, res: Response) => {
   } catch (erro) {
     console.error(erro);
 
+    if (erro instanceof Error && erro.name === "TimeoutError") {
+    return res.status(504).json({
+      erro: "O serviço demorou demais para responder",
+    });
+  }
+
     return res.status(500).json({
       erro: "Não foi possível processar a pergunta",
     });

@@ -1,4 +1,5 @@
 import { env } from "../config/env.js";
+import cors from "cors";
 
 type RespostaN8n = {
   resposta: string;
@@ -22,6 +23,7 @@ class ChatService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ pergunta }),
+      signal: AbortSignal.timeout(10_000),
     });
 
     if (!respostaN8n.ok) {

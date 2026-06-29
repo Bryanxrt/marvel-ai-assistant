@@ -11,4 +11,5 @@ function obterVariavelObrigatoria(nome: string): string {
 export const env = {
   port: Number(process.env.PORT ?? 3001),
   n8nWebhookUrl: obterVariavelObrigatoria("N8N_WEBHOOK_URL"),
+  frontendUrl: obterVariavelObrigatoria("FRONTEND_URL"),
 };

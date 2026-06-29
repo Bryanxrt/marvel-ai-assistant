@@ -1,8 +1,11 @@
 import express from "express";
 import chatRouter from "./controller/chatController.js";
 import { env } from "./config/env.js";
+import cors from "cors";
 
 const app = express();
+
+app.use( cors ({ origin: env.frontendUrl }));
 
 app.use(express.json());
 
