@@ -22,7 +22,7 @@ class ChatService {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ pergunta }),
-      signal: AbortSignal.timeout(10_000),
+      signal: AbortSignal.timeout(120_000),
     });
 
     if (!respostaN8n.ok) {
