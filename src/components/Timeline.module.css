@@ -1,0 +1,54 @@
+.wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.phaseBlock { margin-bottom: 52px; }
+
+.phaseHeader {
+  display: flex; align-items: center; gap: 14px;
+  border: 1px solid; border-left-width: 4px;
+  padding: 14px 22px;
+}
+
+.phaseCircle {
+  width: 36px; height: 36px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: #fff;
+  flex-shrink: 0;
+}
+
+.phaseName { font-size: 26px; letter-spacing: 4px; }
+.phaseCount { font-size: 12px; color: #555; margin-left: auto; }
+
+.list { position: relative; }
+
+.connector {
+  position: absolute; left: 18px; top: 0; bottom: 0; width: 2px;
+}
+
+.row {
+  display: flex; align-items: center; gap: 14px;
+  padding: 12px 0 12px 0;
+  border-bottom: 1px solid #141414;
+  margin-left: 0;
+  transition: background .2s;
+}
+.row:hover { background: #111; }
+
+.numCircle {
+  width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Bebas Neue', sans-serif; font-size: 14px; color: #fff;
+  z-index: 1; margin-left: 2px;
+}
+
+.icon { font-size: 22px; flex-shrink: 0; }
+
+.title { flex: 1; font-size: 14px; color: #eee; font-weight: 600; }
+.year  { font-size: 13px; color: #666; flex-shrink: 0; }
+
+@media (max-width: 560px) {
+  .title { font-size: 12.5px; }
+}

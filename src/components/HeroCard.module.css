@@ -1,0 +1,41 @@
+.card {
+  /* layout e padding gerenciados via inline styles no JSX */
+}
+
+.icon { font-size: 48px; margin-bottom: 14px; }
+
+.name {
+  font-size: 24px;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.alias {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.desc {
+  font-size: 13px;
+  color: #bbb;
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.powers {
+  list-style: none;
+  margin-bottom: 18px;
+  width: 100%;
+}
+.powers li {
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.powerText { color: #ddd; margin-left: 6px; }
+.powers li::before {
+  content: '⬢';
+  margin-right: 6px;
+}

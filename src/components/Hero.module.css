@@ -1,0 +1,66 @@
+.wrap {
+  min-height: 100vh;
+  padding-top: 64px;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(237,29,36,.15) 0%, transparent 65%), #0B0B0B;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding-left: 24px; padding-right: 24px;
+  position: relative; overflow: hidden;
+}
+
+.grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(237,29,36,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(237,29,36,.05) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.scanline {
+  position: absolute; left: 0; right: 0; height: 2px; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(237,29,36,.35), transparent);
+  animation: scan 7s linear infinite;
+}
+
+.content {
+  position: relative; z-index: 1; max-width: 840px;
+}
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(237,29,36,.4); background: rgba(237,29,36,.08);
+  padding: 6px 18px; margin-bottom: 28px;
+}
+.dot { width: 6px; height: 6px; border-radius: 50%; background: #ED1D24; }
+.badgeText { font-size: 11px; letter-spacing: 3px; color: #ED1D24; font-weight: 600; }
+
+.title {
+  font-size: clamp(72px, 14vw, 148px);
+  line-height: .88;
+  letter-spacing: 6px;
+  margin-bottom: 28px;
+}
+
+.subtitle {
+  font-size: clamp(15px, 2.5vw, 20px);
+  color: #999;
+  max-width: 480px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+}
+.primaryBtn { padding: 16px 48px; font-size: 20px; }
+.secondaryBtn { padding: 16px 32px; font-size: 13px; }
+
+.stats {
+  display: flex; gap: 56px; justify-content: center; margin-top: 72px; flex-wrap: wrap;
+}
+.statNum { font-size: 58px; color: #ED1D24; line-height: 1; }
+.statLabel { font-size: 11px; letter-spacing: 3px; color: #555; text-transform: uppercase; }
+
+.fade {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 80px;
+  background: linear-gradient(transparent, #0B0B0B); pointer-events: none;
+}
