@@ -1,0 +1,31 @@
+.page { padding-top: 64px; }
+
+.header {
+  padding: 56px 24px 40px;
+  background: #111;
+  border-bottom: 1px solid #141414;
+  text-align: center;
+}
+
+.kicker { font-size: 11px; letter-spacing: 4px; color: #ED1D24; margin-bottom: 8px; }
+.title { font-size: clamp(48px, 8vw, 84px); letter-spacing: 4px; }
+
+.loadingText {
+  font-size: 11px; letter-spacing: 2px; color: #555; margin-bottom: 12px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border: none;
+  transition: all .2s;
+}

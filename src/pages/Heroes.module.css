@@ -1,0 +1,12 @@
+.page { padding-top: 64px; }
+
+.header {
+  padding: 56px 24px 40px;
+  background: #111;
+  border-bottom: 1px solid #141414;
+  text-align: center;
+}
+
+.kicker { font-size: 11px; letter-spacing: 4px; color: #ED1D24; margin-bottom: 8px; }
+.title { font-size: clamp(48px, 8vw, 84px); letter-spacing: 4px; }
+.subtitle { color: #666; font-size: 15px; }

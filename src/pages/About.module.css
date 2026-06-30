@@ -1,0 +1,48 @@
+.page { padding-top: 64px; }
+
+.header {
+  padding: 56px 24px 40px;
+  background: #111;
+  border-bottom: 1px solid #141414;
+  text-align: center;
+}
+
+.kicker { font-size: 11px; letter-spacing: 4px; color: #ED1D24; margin-bottom: 8px; }
+.title { font-size: clamp(48px, 8vw, 84px); letter-spacing: 4px; }
+.subtitle { color: #888; font-size: 15px; max-width: 560px; margin: 0 auto; line-height: 1.7; }
+
+.techCard { padding: 24px; }
+.techName { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 1px; color: #ED1D24; margin-bottom: 8px; }
+.techDesc { font-size: 13px; color: #999; line-height: 1.6; }
+
+.archList {
+  max-width: 720px;
+}
+
+.archRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #141414;
+}
+
+.archLabel {
+  font-size: 13px;
+  color: #ED1D24;
+  font-weight: 700;
+  letter-spacing: .5px;
+  flex-shrink: 0;
+  width: 180px;
+}
+
+.archValue {
+  font-size: 13px;
+  color: #bbb;
+  text-align: right;
+}
+
+@media (max-width: 560px) {
+  .archRow { flex-direction: column; gap: 4px; }
+  .archValue { text-align: left; }
+}
